@@ -15,8 +15,8 @@
 	accurate_range = 32
 	max_range = 32
 	scatter = 0
-	damage = 70
-	penetration= ARMOR_PENETRATION_TIER_5
+	damage = 300
+	penetration= ARMOR_PENETRATION_TIER_8
 	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = 0
 
@@ -38,19 +38,19 @@
 
 /datum/ammo/bullet/sniper/upp
 	name = "armor-piercing sniper bullet"
-	damage = 80
+	damage = 240
 	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/heap
 	name = "high velocity armor-piercing sniper bullet"
-	damage = 110
-	penetration = ARMOR_PENETRATION_TIER_8
+	damage = 350
+	penetration = ARMOR_PENETRATION_TIER_9
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak
 	name = "flak sniper bullet"
-	damage = 60
+	damage = 260
 	penetration = ARMOR_PENETRATION_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
@@ -68,8 +68,8 @@
 
 /datum/ammo/bullet/sniper/upp_pve
 	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
-	damage = 60
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 250
+	penetration = ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/anti_materiel
@@ -79,7 +79,7 @@
 	accuracy = HIT_ACCURACY_TIER_10
 	accurate_range = 48
 	max_range = 48 //Overpen through half a colony amuses me greatly
-	damage = 190
+	damage = 550
 	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge //10x99 casing pipe implies this is actually cased, so...
@@ -245,7 +245,7 @@
 	))
 
 /datum/ammo/bullet/sniper/anti_materiel/vulture
-	damage = 400 // Fully intended to vaporize anything smaller than a mini cooper
+	damage = 900 // Fully intended to vaporize anything smaller than a mini cooper
 	accurate_range_min = 0
 	handful_state = "vulture_bullet"
 	sound_hit = 'sound/bullets/bullet_vulture_impact.ogg'
@@ -264,7 +264,7 @@
 
 /datum/ammo/bullet/sniper/anti_materiel/vulture/holo_target
 	name = "holo-targeting anti-materiel sniper bullet"
-	damage = 60 // it's a big bullet but its purpose is to support marines, not to kill enemies by itself
+	damage = 200 // it's a big bullet but its purpose is to support marines, not to kill enemies by itself
 	/// inflicts this many holo stacks per bullet hit
 	var/holo_stacks = 333
 	/// modifies the default cap limit of 100 by this amount
@@ -289,7 +289,7 @@
 
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
 	accuracy = HIT_ACCURACY_TIER_8
-	damage = 150
+	damage = 550
 	shell_speed = AMMO_SPEED_TIER_6 + AMMO_SPEED_TIER_2
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
