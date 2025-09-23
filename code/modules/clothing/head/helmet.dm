@@ -731,14 +731,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		if(!isnull(GLOB.huds[new_visor.hud_type]?.hudusers[user]))
 			continue
 
-		if(!new_visor.can_toggle(user))
-			continue
-
 		active_visor = new_visor
 		toggle_visor(user)
 		return active_visor
 
-	to_chat(user, SPAN_WARNING("There are no visors to swap to currently."))
 	return FALSE
 
 /datum/action/item_action/cycle_helmet_huds/New(Target, obj/item/holder)
