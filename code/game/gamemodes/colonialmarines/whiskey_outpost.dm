@@ -609,7 +609,7 @@
 	playsound(src,'sound/machines/click.ogg', 15, 1)
 
 	var/list/supplies = list(
-		"10x24mm, slugs, buckshot, and 10x20mm rounds",
+		"10x24mm, slugs, buckshot rounds",
 		"Explosives and grenades",
 		"Rocket ammo",
 		"Sniper ammo",
@@ -617,14 +617,18 @@
 		"Pyrotechnician tanks",
 		"Scout ammo",
 		"Smartgun ammo",
+//RUPVECM START
+		"Metal crate",
+		"Medical supply",
+//RUCMPVE END
 	)
 
 	var/supply_drop_choice = tgui_input_list(user, "Which supplies to call down?", "Supply Drop", supplies)
 
 	switch(supply_drop_choice)
-		if("10x24mm, slugs, buckshot, and 10x20mm rounds")
+		if("10x24mm, slugs, buckshot rounds")
 			supply_drop = 0
-			to_chat(usr, SPAN_NOTICE("10x24mm, slugs, buckshot, and 10x20mm rounds will now drop!"))
+			to_chat(usr, SPAN_NOTICE("10x24mm, slugs, buckshot rounds will now drop!"))
 		if("Rocket ammo")
 			supply_drop = 1
 			to_chat(usr, SPAN_NOTICE("Rocket ammo will now drop!"))
@@ -646,6 +650,14 @@
 		if("Scout ammo")
 			supply_drop = 7
 			to_chat(usr, SPAN_NOTICE("Scout ammo will now drop!"))
+//RUPVECM START
+		if("Metal crate")
+			supply_drop = 8
+			to_chat(usr, SPAN_NOTICE("Crate with metal will now drop!"))
+		if("Medical supply")
+			supply_drop = 9
+			to_chat(usr, SPAN_NOTICE("Crate with medical supply will now drop!"))
+//RUPVECM END
 		else
 			return
 
@@ -684,21 +696,21 @@
 		if(0) // Alright 2 mags for the SL, a few mags for M41As that people would need. M39s get some love and split the shotgun load between slugs and buckshot.
 			spawnitems = list(/obj/item/ammo_magazine/rifle/m41aMK1,
 							/obj/item/ammo_magazine/rifle/m41aMK1,
-							/obj/item/ammo_magazine/rifle,
-							/obj/item/ammo_magazine/rifle,
-							/obj/item/ammo_magazine/rifle,
-							/obj/item/ammo_magazine/rifle/ap,
-							/obj/item/ammo_magazine/rifle/ap,
-							/obj/item/ammo_magazine/rifle/ap,
-							/obj/item/ammo_magazine/rifle/ap,
-							/obj/item/ammo_magazine/smg/m39,
-							/obj/item/ammo_magazine/smg/m39,
-							/obj/item/ammo_magazine/smg/m39,
-							/obj/item/ammo_magazine/smg/m39,
-							/obj/item/ammo_magazine/smg/m39/ap,
-							/obj/item/ammo_magazine/smg/m39/ap,
-							/obj/item/ammo_magazine/smg/m39/ap,
-							/obj/item/ammo_magazine/smg/m39/ap,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
+							/obj/item/ammo_magazine/rifle/m41aMK1,
 							/obj/item/ammo_magazine/shotgun/slugs,
 							/obj/item/ammo_magazine/shotgun/slugs,
 							/obj/item/ammo_magazine/shotgun/slugs,
@@ -756,6 +768,29 @@
 							/obj/item/ammo_magazine/rifle/m49a/custom,
 							/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
 							/obj/item/ammo_magazine/rifle/m49a/custom/explosive)
+//RUPVECM START
+		if(8) //Give them Metal for fotification
+			spawnitems = list(/obj/item/stack/sheet/metal/large_stack,
+							/obj/item/stack/sheet/metal/large_stack,
+							/obj/item/stack/sheet/metal/large_stack,
+							/obj/item/stack/sheet/metal/large_stack,
+							/obj/item/stack/sheet/metal/large_stack,
+							/obj/item/stack/sheet/metal/large_stack,
+							/obj/item/stack/sheet/metal/large_stack)
+		if(9) //Give medical supply
+			spawnitems = list(/obj/item/storage/firstaid/adv,
+							/obj/item/storage/firstaid/adv,
+							/obj/item/storage/firstaid/adv,
+							/obj/item/tool/surgery/surgical_line,
+							/obj/item/storage/pill_bottle/bicaridine,
+							/obj/item/storage/pill_bottle/dexalin,
+							/obj/item/storage/pill_bottle/antitox,
+							/obj/item/storage/pill_bottle/kelotane,
+							/obj/item/storage/pill_bottle/inaprovaline,
+							/obj/item/storage/pill_bottle/tramadol,
+							/obj/item/storage/pill_bottle/peridaxon,
+							/obj/item/stack/medical/splint)
+//RUPVECM END
 	crate.storage_capacity = 60
 	for(var/path in spawnitems)
 		new path(crate)
