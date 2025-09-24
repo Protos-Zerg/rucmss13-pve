@@ -54,7 +54,8 @@
 #define	NUTRITION_MAX 1500
 #define NUTRITION_HIGH 1450
 #define NUTRITION_NORMAL 950
-#define NUTRITION_VERYLOW 150
+#define NUTRITION_LOW 150
+#define NUTRITION_VERYLOW 50
 
 //Metabolization mods
 #define REAGENT_EFFECT "effectiveness"
