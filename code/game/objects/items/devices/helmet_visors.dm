@@ -241,7 +241,7 @@
 
 /obj/item/device/helmet_visor/night_vision
 	name = "AN/NVPAV-75 visor"
-	desc = An insertable visor HUD into a USCM helmet, a more expensive and advanced version of the standard night vision goggles M2, works a lot of time, and gives a full night vision even in a full darkness.."
+	desc = "An insertable visor HUD into a USCM helmet, a more expensive and advanced version of the standard night vision goggles M2, works a lot of time, and gives a full night vision even in a full darkness.."
 	icon_state = "nvg_sight"
 	hud_type = null
 	action_icon_string = "nvg_sight_down"
