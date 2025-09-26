@@ -64,7 +64,6 @@
 
 /obj/item/reagent_container/blood/attack(mob/attacked_mob, mob/user)
 	. = ..()
-
 	if(connected_to == attacked_mob)
 		STOP_PROCESSING(SSobj, src)
 		user.visible_message("[user] detaches [src] from [connected_to].", \
