@@ -16,7 +16,7 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	accurate_range = 7
 	max_range = 11
-	damage = 15
+	damage = 40
 	shell_speed = AMMO_SPEED_TIER_2
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_VERY_SOFT_YELLOW
@@ -61,7 +61,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_9
 	accurate_range = 9
 	max_range = 11
-	damage = 150
+	damage = 200
 	shrapnel_chance = 5
 	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
 	penetration= ARMOR_PENETRATION_TIER_10
@@ -169,7 +169,7 @@
 //USCM Hornet AA missile
 /datum/ammo/rocket/ap/anti_air
 	name = "hypervelocity anti-air missile"
-	damage = 250
+	damage = 350
 	max_range = 16
 	vehicle_slowdown_time = 4 SECONDS
 	shell_speed = AMMO_SPEED_TIER_8
@@ -248,7 +248,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
 	max_range = 32
-	damage = 200
+	damage = 1000
 	shell_speed = AMMO_SPEED_TIER_3
 	var/vehicle_slowdown_time = 10 SECONDS
 
