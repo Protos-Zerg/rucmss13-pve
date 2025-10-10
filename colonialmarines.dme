@@ -1494,6 +1494,7 @@
 #include "code\game\verbs\preferences.dm"
 #include "code\game\verbs\records.dm"
 #include "code\modules\trigger.dm"
+#include "ru-cmss13_mods\include.dm"
 #include "code\modules\admin\admin.dm"
 #include "code\modules\admin\admin_ranks.dm"
 #include "code\modules\admin\admin_verbs.dm"
